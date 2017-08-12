@@ -1,0 +1,56 @@
+{
+  "name": "@robotlegsjs/phaser-boilerplate",
+  "version": "0.0.1",
+  "description": "Tiny flexible template for writing Phaser games in TypeScript using RobotlegsJS.",
+  "main": "build/index.html",
+  "scripts": {
+    "start": "gulp",
+    "autoformat": "tsfmt -r",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "RobotlegsJS",
+    "Phaser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-Boilerplate.git"
+  },
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate/issues"
+  },
+  "author": "RobotlegsJS",
+  "contributors": [
+    "Tiago Schenkel <tiago.schenkel@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@robotlegsjs/core": "0.0.3",
+    "@robotlegsjs/phaser": "0.0.2",
+    "phaser-ce": "^2.8.3",
+    "reflect-metadata": "^0.1.10"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.2.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "mocha": "^3.5.0",
+    "tsify": "^3.0.1",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2",
+    "typescript-formatter": "^5.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0",
+    "yargs": "^8.0.2"
+  }
+}

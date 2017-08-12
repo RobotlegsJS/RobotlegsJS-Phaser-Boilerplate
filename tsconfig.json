@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "build/scripts",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "types": ["mocha", "reflect-metadata"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "noResolve": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": false
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
