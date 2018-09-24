@@ -1,25 +1,17 @@
 {
   "compilerOptions": {
-    "outDir": "build/scripts",
+    "module": "es6",
     "target": "es5",
-    "lib": ["es6", "dom"],
-    "types": ["mocha", "reflect-metadata"],
-    "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react",
-    "sourceMap": true,
+    "sourceMap": false,
+    "declaration": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "isolatedModules": false,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "noResolve": false,
-    "noUnusedParameters": false,
-    "noUnusedLocals": true,
-    "strictNullChecks": false
-  },
-  "include": [
-    "./src/**/*.ts"
-  ]
+    "lib": ["dom", "es2015.promise", "es6"]
+  }
 }

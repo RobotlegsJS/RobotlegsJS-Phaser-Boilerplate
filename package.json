@@ -1,17 +1,21 @@
 {
   "name": "@robotlegsjs/phaser-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny flexible template for writing Phaser games in TypeScript using RobotlegsJS.",
-  "main": "build/index.html",
+  "main": "./src/Game.ts",
   "scripts": {
-    "start": "gulp",
-    "autoformat": "tsfmt -r",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "build": "webpack --config config/webpack.config.js --env production --mode production --progress --colors",
+    "stats": "webpack --config config/webpack.config.js --env production --mode production --profile --json > stats.json",
+    "start": "webpack-dev-server --config config/webpack.config.js --mode development --host 0.0.0.0",
+    "build-assets": "node ./scripts/generateAssetsClass.js",
+    "serve": "npm run build && serve -p 3000 -s dist"
   },
   "keywords": [
     "TypeScript",
     "RobotlegsJS",
-    "Phaser"
+    "Phaser",
+    "Phaser3"
   ],
   "repository": {
     "type": "git",
@@ -26,31 +30,46 @@
     "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
-  "dependencies": {
-    "@robotlegsjs/core": "0.0.4",
-    "@robotlegsjs/phaser": "0.0.3",
-    "phaser-ce": "^2.8.4",
-    "reflect-metadata": "^0.1.10"
-  },
   "devDependencies": {
-    "@types/mocha": "^2.2.42",
-    "browser-sync": "^2.18.13",
-    "browserify": "^14.4.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-typescript": "^3.2.2",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "mocha": "^3.5.0",
-    "tsify": "^3.0.1",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.1",
-    "typescript-formatter": "^6.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0",
-    "yargs": "^8.0.2"
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "directory-tree": "^2.1.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "expose-loader": "^0.7.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.14.3",
+    "raw-loader": "^0.5.1",
+    "readdirp": "^2.2.1",
+    "shelljs": "^0.8.2",
+    "ts-loader": "^5.2.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-loader": "^3.6.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.0.3",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.19.1",
+    "webpack-bundle-analyzer": "^3.0.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4",
+    "xml2js": "^0.4.19"
+  },
+  "dependencies": {
+    "@koreez/phaser3-ninepatch": "^1.2.1",
+    "@robotlegsjs/core": "^0.2.1",
+    "@robotlegsjs/macrobot": "^0.2.1",
+    "@robotlegsjs/phaser": "^0.4.0",
+    "@robotlegsjs/signalcommandmap": "^0.2.0",
+    "@robotlegsjs/signals": "^0.2.0",
+    "phaser": "^3.13.0",
+    "reflect-metadata": "^0.1.12"
   }
 }

@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gameBg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+canvas {
+  border-style: dashed;
+  border-width: 1px;
+}
