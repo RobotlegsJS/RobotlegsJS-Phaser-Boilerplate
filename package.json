@@ -9,7 +9,7 @@
     "stats": "webpack --config config/webpack.config.js --env production --mode production --profile --json > stats.json",
     "start": "webpack-dev-server --config config/webpack.config.js --mode development --host 0.0.0.0",
     "build-assets": "node ./scripts/generateAssetsClass.js",
-    "serve": "npm run build && serve -p 3000 -s dist"
+    "serve": "npm run serve -p 3000 -s dist"
   },
   "keywords": [
     "TypeScript",
@@ -47,6 +47,7 @@
     "prettier": "^1.14.3",
     "raw-loader": "^0.5.1",
     "readdirp": "^2.2.1",
+    "serve": "^10.0.2",
     "shelljs": "^0.8.2",
     "ts-loader": "^5.2.0",
     "tslint": "^5.11.0",
