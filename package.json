@@ -4,6 +4,7 @@
   "description": "Tiny flexible template for writing Phaser games in TypeScript using RobotlegsJS.",
   "main": "./src/Game.ts",
   "scripts": {
+    "autoformat": "prettier --config .prettierrc --write src/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "build": "webpack --config config/webpack.config.js --env production --mode production --progress --colors",
     "stats": "webpack --config config/webpack.config.js --env production --mode production --profile --json > stats.json",
