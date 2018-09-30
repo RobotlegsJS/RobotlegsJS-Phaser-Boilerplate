@@ -1,4 +1,28 @@
-### Node template
+# Build
+build/
+/npm-debug.log
+/dist/
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+### Node ###
 # Logs
 logs
 *.log
@@ -58,8 +82,12 @@ typings/
 # dotenv environment variables file
 .env
 
-# InteliJ folder
-.idea
-
-# Binaries
-build
+# System and IDE files
+*.suo
+*.sublime-project
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+.idea/*
+*.log
+.directory

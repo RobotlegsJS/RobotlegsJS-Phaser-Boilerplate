@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
-    "outDir": "build/scripts",
+    "outDir": "lib",
     "target": "es5",
-    "lib": ["es6", "dom"],
-    "types": ["mocha", "reflect-metadata"],
+    "lib": ["es7", "dom"],
+    "types": ["reflect-metadata"],
+    "sourceMap": true,
+    "inlineSources": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react",
-    "sourceMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "noResolve": false,
-    "noUnusedParameters": false,
+    "removeComments": false,
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
     "noUnusedLocals": true,
-    "strictNullChecks": false
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "./src/**/*.ts"
+  ],
+  "files": [
+    "./definitions/phaser.d.ts"
   ]
 }

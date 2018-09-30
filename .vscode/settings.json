@@ -1,0 +1,21 @@
+{
+    "cSpell.words": [
+        "Arial",
+        "MVCS",
+        "Robotlegs",
+        "autorun",
+        "bitmapfonts",
+        "devtool",
+        "injectable",
+        "macrobot",
+        "mobx",
+        "netlifyctl",
+        "ninepatch",
+        "robotlegsjs",
+        "tweens",
+        "uglifyjs",
+        "yoyo"
+    ],
+    "files.autoSave": "onWindowChange",
+    "tslint.autoFixOnSave": true,
+}
