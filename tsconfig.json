@@ -1,17 +1,30 @@
 {
   "compilerOptions": {
-    "module": "es6",
+    "outDir": "lib",
     "target": "es5",
+    "lib": ["es7", "dom"],
+    "types": ["reflect-metadata"],
+    "sourceMap": true,
+    "inlineSources": true,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": false,
-    "declaration": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitAny": true,
-    "isolatedModules": false,
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "lib": ["dom", "es2015.promise", "es6"]
-  }
+    "removeComments": false,
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "files": [
+    "./definitions/phaser.d.ts"
+  ]
 }
