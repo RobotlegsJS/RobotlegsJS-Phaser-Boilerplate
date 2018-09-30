@@ -11,26 +11,36 @@
     "build-assets": "node ./scripts/generateAssetsClass.js",
     "serve": "npm run serve -p 3000 -s dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-Boilerplate.git"
+  },
   "keywords": [
     "TypeScript",
     "RobotlegsJS",
     "Phaser",
     "Phaser3"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-Boilerplate.git"
-  },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate#readme",
-  "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate/issues"
-  },
   "author": "RobotlegsJS",
   "contributors": [
     "Gnun Ulikhanyan <gnun.ulikhanyan@gmail.com>",
     "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-Boilerplate#readme",
+  "dependencies": {
+    "@koreez/phaser3-ninepatch": "^1.2.1",
+    "@robotlegsjs/core": "^0.2.1",
+    "@robotlegsjs/macrobot": "^0.2.1",
+    "@robotlegsjs/phaser": "^0.4.0",
+    "@robotlegsjs/signalcommandmap": "^0.2.0",
+    "@robotlegsjs/signals": "^0.2.0",
+    "phaser": "^3.13.0",
+    "reflect-metadata": "^0.1.12"
+  },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "clean-webpack-plugin": "^0.1.19",
@@ -63,15 +73,5 @@
     "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4",
     "xml2js": "^0.4.19"
-  },
-  "dependencies": {
-    "@koreez/phaser3-ninepatch": "^1.2.1",
-    "@robotlegsjs/core": "^0.2.1",
-    "@robotlegsjs/macrobot": "^0.2.1",
-    "@robotlegsjs/phaser": "^0.4.0",
-    "@robotlegsjs/signalcommandmap": "^0.2.0",
-    "@robotlegsjs/signals": "^0.2.0",
-    "phaser": "^3.13.0",
-    "reflect-metadata": "^0.1.12"
   }
 }
