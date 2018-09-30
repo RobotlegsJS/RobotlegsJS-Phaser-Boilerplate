@@ -7,7 +7,7 @@ A bootstrap project to create games with Phaser3 + TypeScript + RobotlegsJS + We
 - TsLint with TypeScript Standard Style configuration.
 - Browsers are automatically updated as you change project files.
 - Webpack configuration ready.
-- Asset gnerator.
+- Asset generator.
 - Generated assets loader functionality.
 - Auto resizing.
 
