@@ -1,7 +1,8 @@
 import { inject, injectable } from "@robotlegsjs/core";
-import { SequenceMacro, AsyncCommand } from "@robotlegsjs/macrobot";
+import { SequenceMacro } from "@robotlegsjs/macrobot";
 import { GameModel } from "../models/GameModel";
 import { GameModelChangeSignal } from "../signals";
+import { GameStartupSubCommand } from "./GameStartupSubCommand";
 
 @injectable()
 export class GameStartupCommand extends SequenceMacro {
@@ -20,19 +21,5 @@ export class GameStartupCommand extends SequenceMacro {
         this.gameModel.resize(this.gameModel.width / 2, this.gameModel.height / 2);
         this.gameModelChangeSignal.dispatch();
         super.dispatchComplete(success);
-    }
-}
-
-@injectable()
-export class GameStartupSubCommand extends AsyncCommand {
-    @inject(Number)
-    protected _delay: number;
-
-    public execute(): void {
-        setTimeout(this.onTimeout.bind(this), this._delay);
-    }
-
-    protected onTimeout(): void {
-        this.dispatchComplete(true);
     }
 }
