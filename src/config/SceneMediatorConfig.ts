@@ -1,5 +1,5 @@
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
-import { ISceneMediatorMap, IViewMediatorMap } from "@robotlegsjs/phaser";
+import { ISceneMediatorMap } from "@robotlegsjs/phaser";
 import { BootMediator } from "../mediators/BootMediator";
 import { MainMediator } from "../mediators/MainMediator";
 import { PreloadMediator } from "../mediators/PreloadMediator";
@@ -7,9 +7,6 @@ import { Boot, Main, Preload } from "../scenes";
 
 @injectable()
 export class SceneMediatorConfig implements IConfig {
-    @inject(IViewMediatorMap)
-    private viewMediatorMap: IViewMediatorMap;
-
     @inject(ISceneMediatorMap)
     private sceneMediatorMap: ISceneMediatorMap;
 
@@ -25,7 +22,6 @@ export class SceneMediatorConfig implements IConfig {
     }
 
     private mapViewMediators(): void {
-        // this.viewMediatorMap.map(SomeView).toMediator(TheMeditorForSomeView)
         return;
     }
 }
