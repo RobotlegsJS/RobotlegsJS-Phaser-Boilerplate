@@ -1,2 +1,2 @@
-export * from './GameStartupSignal';
-export * from './GameModelChangeSignal';
+export * from "./GameStartupSignal";
+export * from "./GameModelChangeSignal";

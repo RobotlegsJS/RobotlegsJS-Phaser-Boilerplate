@@ -1,1 +1,1 @@
-export * from './GameStartupCommand';
+export * from "./GameStartupCommand";
