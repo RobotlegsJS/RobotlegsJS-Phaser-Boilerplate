@@ -1,22 +1,25 @@
-RobotlegsJS Phaser TypeScript Boilerplate
-===
+# RobotlegsJS Phaser TypeScript Boilerplate
 
 A bootstrap project to create games with Phaser3 + TypeScript + RobotlegsJS + Webpack.
 
+## Features
 
-#Features
+- TsLint with TypeScript Standard Style configuration.
+- Browsers are automatically updated as you change project files.
+- Webpack configuration ready.
+- Asset gnerator.
+- Generated assets loader functionality.
+- Auto resizing.
 
-- TsLint with TypeScript Standard Style configuration
-- Browsers are automatically updated as you change project files
-- Webpack configuration ready
-- Asset gnerator
-- Generated assets loader functionality
+## Dependencies
+
+- [Phaser](https://github.com/photonstorm/phaser).
+- [SignalsJS](https://github.com/RobotlegsJS/SignalsJS).
 - [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS).
+- [RobotlegsJS-Phaser](https://github.com/RobotlegsJS/RobotlegsJS-Phaser).
+- [RobotlegsJS-SignalCommandMap](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap).
 - [RobotlegsJS-Macrobot](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot).
-- [RobotlegsJS-SignalsJS](https://github.com/RobotlegsJS/SignalsJS).
-- [RobotlegsJS-Phaser-SignalCommandMap](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap).
-- [NinePatchPlugin](https://github.com/koreezgames/phaser3-ninepatch-plugin).
-- auto resizeing 
+- [Phaser3-Nine-Patch](https://github.com/koreezgames/phaser3-ninepatch-plugin).
 
 ## Why?
 
@@ -26,23 +29,23 @@ TypeScript [provides advanced autocompletion, navigation, and refactoring](https
 
 You need [Node.js and npm](https://nodejs.org/). You should also have git installed, but it's not mandatory.
 
-Clone the repository (or download the ZIP file)
+Clone the repository (or download the ZIP file):
 
 `git clone git@github.com:RobotlegsJS/RobotlegsJS-Phaser-Boilerplate.git`
 
-Install dependencies
+Install dependencies:
 
 `npm install`
 
-Run a development build...
+Run a development build:
 
 `npm start`
 
-production build.
+Run a production build:
 
 `npm run build`
 
-serve build
+Serve build:
 
 `npm run serve`
 
