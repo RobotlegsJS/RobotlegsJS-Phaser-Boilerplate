@@ -11,6 +11,7 @@ export class Preload extends Phaser.Scene {
     public create(): void {
         console.log("Preload scene create");
         this.scene.start(SceneKey.MAIN);
+        this.scene.start(SceneKey.BG);
         this.scene.remove(this);
     }
 }

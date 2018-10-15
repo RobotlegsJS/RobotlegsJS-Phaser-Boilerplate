@@ -1,6 +1,6 @@
 import { NinePatch, INinePatchCreator, INinePatchFactory } from "@koreez/phaser3-ninepatch";
 import { gameConfig } from "../constants/GameConfig";
-import { Atlases, Images } from "../assets";
+import {  Images } from "../assets";
 import { MushroomView } from "../views";
 
 export class Main extends Phaser.Scene {
@@ -15,8 +15,6 @@ export class Main extends Phaser.Scene {
     private mushroom: MushroomView;
 
     public create(): void {
-        this.add.image(gameConfig.width * 0.5, gameConfig.height * 0.5, Atlases.Main.Atlas.Name, Atlases.Main.Atlas.Frames.Bg);
-
         this.ninePatch = this.add.ninePatch(gameConfig.width * 0.5, gameConfig.height * 0.5, 300, 300, Images.SquareGreen.Name, null, {
             bottom: 14, // Amount of pixels for bottom
             left: 6, // Amount of pixels for left

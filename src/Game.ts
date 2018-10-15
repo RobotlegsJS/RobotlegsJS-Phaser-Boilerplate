@@ -9,7 +9,7 @@ import { SceneMediatorConfig } from "./config/SceneMediatorConfig";
 import { gameConfig } from "./constants/GameConfig";
 import { SceneKey } from "./constants/SceneKey";
 import { SignalCommandMapExtension } from "@robotlegsjs/signalcommandmap";
-import { Preload, Main, Boot } from "./scenes";
+import { Preload, Main, Boot, Bg } from "./scenes";
 
 class Game extends Phaser.Game {
     private _context: Context;
@@ -28,6 +28,7 @@ class Game extends Phaser.Game {
             .initialize();
         (this as any).scene.add(SceneKey.BOOT, new Boot(SceneKey.BOOT));
         (this as any).scene.add(SceneKey.PRELOAD, new Preload(SceneKey.PRELOAD));
+        (this as any).scene.add(SceneKey.BG, new Bg(SceneKey.BG));
         (this as any).scene.add(SceneKey.MAIN, new Main(SceneKey.MAIN));
         (this as any).scene.start(SceneKey.BOOT);
     }

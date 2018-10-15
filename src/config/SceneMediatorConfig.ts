@@ -3,7 +3,8 @@ import { ISceneMediatorMap, IViewMediatorMap } from "@robotlegsjs/phaser";
 import { BootMediator } from "../mediators/BootMediator";
 import { MainMediator } from "../mediators/MainMediator";
 import { PreloadMediator } from "../mediators/PreloadMediator";
-import { Boot, Main, Preload } from "../scenes";
+import { BgMediator } from "../mediators";
+import { Boot, Main, Preload, Bg } from "../scenes";
 import { MushroomView } from "../views";
 import MushroomViewMediator from "../mediators/MushroomViewMediator";
 
@@ -23,6 +24,7 @@ export class SceneMediatorConfig implements IConfig {
     private mapSceneMediators(): void {
         this.sceneMediatorMap.map(Boot).toMediator(BootMediator);
         this.sceneMediatorMap.map(Preload).toMediator(PreloadMediator);
+        this.sceneMediatorMap.map(Bg).toMediator(BgMediator);
         this.sceneMediatorMap.map(Main).toMediator(MainMediator);
     }
 
