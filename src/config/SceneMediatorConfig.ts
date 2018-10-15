@@ -1,14 +1,19 @@
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
-import { ISceneMediatorMap } from "@robotlegsjs/phaser";
+import { ISceneMediatorMap, IViewMediatorMap } from "@robotlegsjs/phaser";
 import { BootMediator } from "../mediators/BootMediator";
 import { MainMediator } from "../mediators/MainMediator";
 import { PreloadMediator } from "../mediators/PreloadMediator";
 import { Boot, Main, Preload } from "../scenes";
+import { MushroomView } from "../views";
+import MushroomViewMediator from "../mediators/MushroomViewMediator";
 
 @injectable()
 export class SceneMediatorConfig implements IConfig {
     @inject(ISceneMediatorMap)
     private sceneMediatorMap: ISceneMediatorMap;
+
+    @inject(IViewMediatorMap)
+    private viewMediatorMap:IViewMediatorMap;
 
     public configure(): void {
         this.mapSceneMediators();
@@ -22,6 +27,6 @@ export class SceneMediatorConfig implements IConfig {
     }
 
     private mapViewMediators(): void {
-        return;
+        this.viewMediatorMap.map(MushroomView).toMediator(MushroomViewMediator);
     }
 }

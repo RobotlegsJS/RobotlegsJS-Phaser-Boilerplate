@@ -27,6 +27,7 @@ export class MainMediator extends SceneMediator<Main> {
 
     protected sceneCreated(): void {
         this.gameStartupSignal.dispatch(Phaser.Math.Between(1000, 5000));
+        this.scene.creteMushroom();
     }
 
     private onGameModelChange: () => void = () => {

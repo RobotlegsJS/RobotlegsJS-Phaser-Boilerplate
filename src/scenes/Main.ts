@@ -1,6 +1,7 @@
 import { NinePatch, INinePatchCreator, INinePatchFactory } from "@koreez/phaser3-ninepatch";
 import { gameConfig } from "../constants/GameConfig";
 import { Atlases, Images } from "../assets";
+import { MushroomView } from "../views";
 
 export class Main extends Phaser.Scene {
     public onCreationCompleteCb: () => void;
@@ -10,6 +11,8 @@ export class Main extends Phaser.Scene {
 
     private ninePatch: NinePatch;
     private direction: number = 1;
+
+    private mushroom: MushroomView;
 
     public create(): void {
         this.add.image(gameConfig.width * 0.5, gameConfig.height * 0.5, Atlases.Main.Atlas.Name, Atlases.Main.Atlas.Frames.Bg);
@@ -21,6 +24,14 @@ export class Main extends Phaser.Scene {
             top: 10 // Amount of pixels for top
         });
         this.handleCreationComplete();
+    }
+
+    public creteMushroom():void {
+       this.mushroom = new MushroomView(this);
+       this.mushroom.setPosition(50, 50);
+       this.mushroom.setSize(100, 100);
+       this.mushroom.setInteractive();
+       this.add.existing(this.mushroom); 
     }
 
     public update(): void {
